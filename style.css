@@ -1,0 +1,186 @@
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.45), rgba(255,255,255,0.45)),
+        url(images/hatterkep.jpg);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    border-radius: 10px;
+    border: 0.4vw solid white !important;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.65), rgba(255,255,255,0.65)),
+        url(images/hatterkep-csoport.avif);
+    padding: 10px;
+    margin: 10px;
+    color: rgb(40, 40, 88);
+}
+
+header img {
+    float: left;
+    margin: 20px 10px 0px 10px;
+}
+
+div#wrapper {
+    margin: 10px;
+    max-width: calc(100% - 20px);
+}
+
+#nav {
+    margin: 10px;
+    border-radius: 10px;
+    border: 0.4vw solid white !important;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.8), rgba(255,255,255,0.8));
+    padding: 5px 10px;
+}
+
+#nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+#nav li {
+    margin: 0;
+}
+
+#nav li.active a {
+    border-bottom: 4px solid rgb(255, 196, 0);
+}
+
+#nav a {
+    display: inline-block;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(71, 71, 71);
+    transition: color 0.25s ease, transform 0.2s ease;
+}
+
+#nav a:hover {
+    color: rgb(255, 196, 0);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 720px) {
+    #nav ul {
+        justify-content: center;
+        gap: 0.25rem;
+    }
+
+    #nav a {
+        padding: 0.65rem 0.9rem;
+        font-size: 0.95rem;
+    }
+}
+
+div#content {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    border: 0.2vw solid white !important;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.9), rgba(255,255,255,0.9)),
+        url(images/hatterkep-csoport.avif);
+    padding: 15px;
+    font-size: 1.2em;
+}
+
+div#content img{
+    float: right;
+    width: 20em;
+    height: auto;
+    margin: 0 0 15px 15px;
+    padding: 3px;
+    border: 3px solid blue;
+}
+
+footer {
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px 20px;
+    border: 0.4vw solid white !important;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.85), rgba(255,255,255,0.85)),
+        url(images/hatterkep-csoport.avif);
+    text-align: center;
+}
+
+.video-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 2%;
+    margin-top: 40px;
+}
+
+.video-box {
+    width: 48%;
+    aspect-ratio: 16 / 9;
+    position: relative;
+    border: 0.4vw solid rgba(255, 196, 0, 0.4);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.video-box iframe,
+.video-box video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+    object-fit: cover;
+}
+
+.video-box:hover {
+    transform: scale(1.006);
+}
+
+.megtalalsz {
+    color: rgb(40, 40, 88);
+    font-size: 50px;
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.map-wrapper {
+    text-align: center;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity: 0.8;
+}
+
+.map-wrapper iframe {
+    display: inline-block;
+    max-width: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.map-wrapper:hover {
+    transform: scale(1.006);
+    opacity: 1;
+}
