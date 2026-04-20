@@ -14,7 +14,7 @@ body {
 
     background:
         linear-gradient(rgba(255, 255, 255, 0.45), rgba(255,255,255,0.45)),
-        url(images/hatterkep.jpg);
+        url(../images/hatterkep.jpg);
 
     background-size: cover;
     background-position: center;
@@ -26,15 +26,10 @@ header {
     border: 0.4vw solid white !important;
     background:
         linear-gradient(rgba(255, 255, 255, 0.65), rgba(255,255,255,0.65)),
-        url(images/hatterkep-csoport.avif);
+        url(../images/hatterkep-csoport.avif);
     padding: 10px;
     margin: 10px;
     color: rgb(40, 40, 88);
-}
-
-header img {
-    float: left;
-    margin: 20px 10px 0px 10px;
 }
 
 div#wrapper {
