@@ -97,19 +97,36 @@ div#content {
     border-radius: 10px;
     border: 0.2vw solid white !important;
     background:
-        linear-gradient(rgba(255, 255, 255, 0.9), rgba(255,255,255,0.9)),
-        url(images/hatterkep-csoport.avif);
+        linear-gradient(rgba(255, 255, 255, 0.75), rgba(255,255,255,0.75)),
+        url(../images/hatterkep-csoport.avif);
     padding: 15px;
     font-size: 1.2em;
 }
 
-.cim {
+.cim,
+.masodlagos {
     color: rgb(40, 40, 88);
-    font-size: 50px;
+    font-size: 60px;
     margin: 0;
     font-weight: bold;
     text-align: center;
     padding: 0;
+}
+
+.masodlagos {
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: 900;
+
+    background-image: url('../images/water2.jpeg');
+    background-size: cover;
+    background-position: center;
+
+    background-clip: text;              /* standard */
+    -webkit-background-clip: text;      /* Chrome, Edge, Safari */
+
+    color: transparent;                 /* fallback */
+    -webkit-text-fill-color: transparent;
 }
 
 div#content img{
@@ -136,7 +153,8 @@ footer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .card {
@@ -161,7 +179,7 @@ footer {
 }
 
 .c-index h1 {
-    color: rgb(235, 235, 235);
+    color: rgb(244, 244, 244);
 }
 
 .card .index {
@@ -194,8 +212,12 @@ footer {
 }
 
 .card:not(.c-index):hover {
-    transform: scale(1.03);
+    transform: translateY(-4px);
     cursor: pointer;
+}
+
+.c-index {
+    background-color: rgb(244, 244, 244);
 }
 
 .c-javascript:hover {
