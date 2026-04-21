@@ -103,6 +103,15 @@ div#content {
     font-size: 1.2em;
 }
 
+.cim {
+    color: rgb(40, 40, 88);
+    font-size: 50px;
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+    padding: 0;
+}
+
 div#content img{
     float: right;
     width: 20em;
@@ -121,4 +130,94 @@ footer {
         linear-gradient(rgba(255, 255, 255, 0.85), rgba(255,255,255,0.85)),
         url(images/hatterkep-csoport.avif);
     text-align: center;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.card {
+    width: 325px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    padding: 16px;
+
+    transition: 0.3s ease-in-out;
+}
+
+.card h1 {
+    margin-bottom: 8px;
+    margin: -16px -16px 8px -16px;
+    padding: 16px;
+    font-size: 55px;
+    padding-bottom: 0;
+    color: white;
+}
+
+.c-index h1 {
+    color: rgb(235, 235, 235);
+}
+
+.card .index {
+    background-color: rgb(255, 196, 0);
+    cursor: default;
+}
+
+.card .javascript {
+    background-color: rgb(32, 156, 32);
+}
+
+.card .react {
+    background-color: rgb(32, 53, 156);
+}
+
+.card .spa {
+    background-color: rgb(156, 32, 133);
+}
+
+.card .fetchapi {
+    background-color: rgb(156, 111, 32);
+}
+
+.card .axios {
+    background-color: rgb(156, 32, 32);
+}
+
+.card .oojs {
+    background-color: rgb(32, 156, 137);
+}
+
+.card:not(.c-index):hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.c-javascript:hover {
+    background-color: rgb(32, 156, 32);
+}
+
+.c-react:hover {
+    background-color: rgb(32, 53, 156);
+}
+
+.c-spa:hover {
+    background-color: rgb(156, 32, 133);
+}
+
+.c-fetchapi:hover {
+    background-color: rgb(156, 111, 32);
+}
+
+.c-axios:hover {
+    background-color: rgb(156, 32, 32);
+}
+
+.c-oojs:hover {
+    background-color: rgb(32, 156, 137);
 }
