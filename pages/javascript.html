@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="utf-8">
-    <title>Balatoni hajók - Belépés</title>
+    <title>JavaScript menü</title>
     <link rel="stylesheet" href="../design/style.css" type="text/css">
+    <link rel="stylesheet" href="../design/styleJavascript.css" type="text/css">
 </head>
+
 <body>
     <header>
         <h1>Web programozás-1 Előadás Házi feladat</h1>
@@ -22,12 +25,95 @@
     </nav>
     <div id="wrapper">
         <div id="content">
-            <h2>JavaScript</h2>
-            <p>JavaScript menü!</p>
+            <h2>Tulajdonos adatok CRUD</h2>
+
+            <div class="bemenet">
+                <input type="text" id="nev" placeholder="Név">
+                <input type="text" id="varos" placeholder="Város">
+                <button class="hozzaadas" onclick="createUser()">Hozzáadás</button>
+            </div>
+
+            <ul id="lista"></ul>
+
+            <script>
+                // "adatbázis" (tömb)
+                let users = [
+                    { id: 1, nev: "Balatonjárók Zrt.", varos: "Siófok" },
+                    { id: 2, nev: "3Hajózási Kft.", varos: "Tihany" },
+                    { id: 3, nev: "Balatoni Hajózási Zrt.", varos: "Siófok" },
+                    { id: 4, nev: "Egyéni vállalkozó", varos: "Siófok" },
+                    { id: 5, nev: "Balatoni Sétahajózási Kft.", varos: "Keszthely" },
+                    { id: 6, nev: "Vízirendőrség", varos: "Siófok" },
+                    { id: 7, nev: "Zánkai GyIC Közhasznú Kft.", varos: "Zánka" }
+                ];
+
+                // READ
+                function render() {
+                    const lista = document.getElementById("lista");
+                    lista.innerHTML = "";
+
+                    users.forEach(user => {
+                        lista.innerHTML += `
+                            
+            <li>
+                <span>${user.nev}</span>
+                <span>${user.varos}</span>
+                <span>
+                    <button class="modositas" onclick="updateUser(${user.id})">Módosítás</button>
+                    <button class="torles" onclick="deleteUser(${user.id})">Törlés</button>
+                </span>
+            </li>
+        `;
+                    });
+                }
+
+                // CREATE
+                function createUser() {
+                    const nev = document.getElementById("nev").value;
+                    const varos = document.getElementById("varos").value;
+
+                    if (!nev || !varos) return;
+
+                    const newUser = {
+                        id: Date.now(),
+                        nev,
+                        varos
+                    };
+
+                    users.push(newUser);
+                    render();
+                }
+
+                // DELETE
+                function deleteUser(id) {
+                    users = users.filter(user => user.id !== id);
+                    render();
+                }
+
+                // UPDATE
+                function updateUser(id) {
+                    const ujNev = prompt("Új név:");
+                    const ujVaros = prompt("Új város:");
+
+                    users = users.map(user => {
+                        if (user.id === id) {
+                            return { ...user, nev: ujNev, varos: ujVaros };
+                        }
+                        return user;
+                    });
+
+                    render();
+                }
+
+                // induláskor
+                render();
+            </script>
+
         </div>
     </div>
     <footer>
         Mata László Dominik (b223va) & Balogh Milán (eecvn6)
     </footer>
 </body>
+
 </html>

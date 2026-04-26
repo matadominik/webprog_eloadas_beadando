@@ -1,0 +1,81 @@
+.bemenet {
+    width: 100%;
+    text-align: center;
+}
+
+input {
+    width: 40%;
+    margin: 12px 0;
+    padding: 12px;
+    border: 2px solid #ddd;
+    outline: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+input:focus {
+    border-color: #7f5ee9;
+}
+
+.hozzaadas {
+    font-size: 0.95rem;
+    width: 18%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 2px solid #ddd;
+    background-color: #7f5ee9;
+    color: white;
+    font-weight: bold;
+}
+
+.hozzaadas:hover {
+    background-color: #8d71ea;
+    cursor: pointer;
+}
+
+#lista {
+    list-style: none;
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 5px;
+    padding: 0;
+}
+
+#lista li {
+    display: table-row;
+    border-bottom: 1px solid #ddd;
+}
+
+#lista li > span {
+    display: table-cell;
+    padding: 12px;
+    vertical-align: middle;
+}
+
+#lista button {
+    font-size: 0.80rem;
+    padding: 12px;
+    border-radius: 6px;
+    border: 2px solid #ddd;
+    color: white;
+    font-weight: bold;
+}
+
+.modositas {
+    background-color: #7f5ee9;
+}
+
+.modositas:hover {
+    background-color: #8d71ea;
+    cursor: pointer;
+}
+
+.torles {
+    background-color: rgb(228, 17, 17);
+}
+
+.torles:hover {
+    background-color: rgb(232, 81, 81);
+    cursor: pointer;
+}
