@@ -20,6 +20,23 @@ function App() {
     setVaros("");
   }
 
+  function deleteUser(id) {
+    setUsers(users.filter(user => user.id !== id));
+  }
+
+  function updateUser(id) {
+    const ujNev = prompt("Új név:");
+    const ujVaros = prompt("Új város:");
+    
+    if (!ujNev || !ujVaros) return;
+
+    setUsers(users.map(user =>
+      user.id === id
+      ? { ...user, nev: ujNev, varos: ujVaros }
+      : user
+    ));
+  }
+
   return (
     <div>
       <h2>React CRUD</h2>
@@ -42,6 +59,14 @@ function App() {
         {users.map(user => (
           <li key={user.id}>
             {user.nev} - {user.varos}
+
+            <button onClick={() => deleteUser(user.id)}>
+              Törlés
+            </button>
+
+            <button onClick={() => updateUser(user.id)}>
+              Módosítás
+            </button>
           </li>
         ))}
       </ul>
